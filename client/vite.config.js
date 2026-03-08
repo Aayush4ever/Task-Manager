@@ -9,7 +9,7 @@ export default defineConfig({
     proxy: {
       // Proxy all /api requests to the Express backend
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://task-manager-1-ipo6.onrender.com',
         changeOrigin: true,
         secure: false,
       },

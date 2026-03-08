@@ -13,7 +13,10 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/task-m
 // ─── Middleware ────────────────────────────────────────────────────────────────
 app.use(
   cors({
-    origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173',
+    origin: [
+      "http://localhost:5173",
+      "https://task-manager-pied-nine.vercel.app"
+    ],
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   })

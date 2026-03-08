@@ -1,7 +1,7 @@
 // AI-generated, reviewed and modified
 import { useState, useEffect, useCallback } from 'react';
 
-const API_BASE = '/api/tasks';
+const API_BASE = `${import.meta.env.VITE_API_URL}/api/tasks`;
 
 export function useTasks() {
   const [tasks, setTasks] = useState([]);
